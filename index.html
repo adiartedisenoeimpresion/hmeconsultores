@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HME Consultores | Estrategia, Inversión y Vinculación</title>
+    <style>
+        /* Extracción de paleta institucional de HME Consultores */
+        :root {
+            --hme-azul-marino: #0b192c;   /* Color dominante del logotipo */
+            --hme-dorado: #c5a86b;        /* Tono arena/dorado de la letra 'E' y líneas */
+            --hme-gris-suave: #f4f6f9;    /* Fondo de secciones secundarias */
+            --hme-texto-oscuro: #1e293b;  /* Lectura principal */
+            --hme-texto-mutado: #64748b;  /* Descripciones secundarias */
+            --blanco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif; /* Buscando la elegancia Serif del logo para títulos */
+        }
+
+        body {
+            background-color: var(--blanco);
+            color: var(--hme-texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* Estilos de tipografía general */
+        h1, h2, h3 {
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 0.5px;
+        }
+
+        p, a, span {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sans-serif limpia para lectura */
+        }
+
+        /* 1. HEADER (Configuración de Barra de Navegación superior) */
+        header {
+            background-color: var(--hme-azul-marino);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-nav img {
+            height: 45px; /* Altura ideal para que luzca el HME Consultores horizontal en barra */
+            display: block;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.activo {
+            color: var(--hme-dorado);
+        }
+
+        /* 2. HERO BANNER (Sección Principal de Impacto) */
+        .hero {
+            background-color: var(--hme-azul-marino);
+            color: var(--blanco);
+            padding: 100px 5% 120px;
+            text-align: center;
+            border-bottom: 4px solid var(--hme-dorado);
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-hme {
+            background-color: var(--hme-dorado);
+            color: var(--hme-azul-marino);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-hme:hover {
+            background-color: var(--blanco);
+            color: var(--hme-azul-marino);
+        }
+
+        /* 3. SECCIÓN: EJES ESTRATÉGICOS (Fila de 3 columnas en WebSite X5) */
+        .seccion-ejes {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .linea-division {
+            width: 80px;
+            height: 2px;
+            background-color: var(--hme-dorado);
+            margin: 0 auto 50px;
+        }
+
+        .grid-ejes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .eje-card {
+            background-color: var(--blanco);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .eje-card:hover {
+            border-color: var(--hme-dorado);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        .eje-card .icono {
+            font-size: 32px;
+            color: var(--hme-dorado);
+            margin-bottom: 20px;
+        }
+
+        .eje-card h3 {
+            font-size: 22px;
+            color: var(--hme-azul-marino);
+            margin-bottom: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .eje-card p {
+            color: var(--hme-texto-mutado);
+            font-size: 15px;
+        }
+
+        /* 4. SECCIÓN DE CIERRE / ACCIÓN (Cinta institucional) */
+        .cinta-contacto {
+            background-color: var(--hme-gris-suave);
+            padding: 50px 5%;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .cinta-contacto h2 {
+            font-size: 28px;
+            color: var(--hme-azul-marino);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        /* 5. FOOTER (Pie de página institucional) */
+        footer {
+            background-color: var(--hme-azul-marino);
+            color: #94a3b8;
+            padding: 60px 5% 30px;
+            font-size: 14px;
+            border-top: 3px solid var(--hme-dorado);
+        }
+
+        .footer-contenido {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .footer-col h4 {
+            color: var(--blanco);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* BREAKPOINTS PARA RESPONSIVIDAD AUTOMÁTICA */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 12px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .footer-contenido {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-nav">
+            <img src="logo-hme-blanco.png" alt="HME Consultores">
+        </div>
+        <nav>
+            <a href="#inicio" class="activo">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Transformando Visiones en Realidad de Negocio</h1>
+        <p>Especialistas en el desarrollo de Estrategia Corporativa, Estructuras de Inversión y Vinculación Público-Privada de alto nivel.</p>
+        <a href="#contacto" class="btn-hme">Solicitar una Consulta</a>
+    </section>
+
+    <main class="seccion-ejes" id="servicios">
+        <div class="linea-division"></div>
+        
+        <div class="grid-ejes">
+            <div class="eje-card">
+                <div class="icono">📊</div>
+                <h3>Estrategia</h3>
+                <p>Consultoría de dirección para el diseño de hojas de ruta corporativas eficaces, optimizando la toma de decisiones y asegurando la competitividad en mercados exigentes.</p>
+            </div>
+
+            <div class="eje-card">
+                <div class="icono">💼</div>
+                <h3>Inversión</h3>
+                <p>Análisis y estructuración de modelos financieros viables que mitiguen riesgos y potencien la rentabilidad y el crecimiento sostenido de activos empresariales.</p>
+            </div>
+
+            <div class="eje-card">
+                <div class="icono">🤝</div>
+                <h3>Vinculación</h3>
+                <p>Especialistas en la articulación y gestión de alianzas estratégicas público-privadas, facilitando la viabilidad operativa y el éxito de proyectos a gran escala.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="cinta-contacto" id="contacto">
+        <h2>¿Listo para estructurar su próximo gran proyecto corporativo?</h2>
+        <a href="mailto:contacto@hmeconsultores.com" class="btn-hme">Contactar a un Consultor</a>
+    </section>
+
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h4>HME Consultores</h4>
+                <p>Estrategia &bull; Inversión &bull; Vinculación público-privada</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Corporativo</h4>
+                <p>📍 Oficinas Centrales México</p>
+                <p>📩 contacto@hmeconsultores.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 HME Consultores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
