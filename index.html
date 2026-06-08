@@ -29,12 +29,12 @@
         }
 
         /* Estilos de tipografía general */
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Times New Roman', Times, serif;
             letter-spacing: 0.5px;
         }
 
-        p, a, span {
+        p, a, span, li {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sans-serif limpia para lectura */
         }
 
@@ -51,7 +51,7 @@
         }
 
         .logo-nav img {
-            height: 99px; /* Altura ideal para que luzca el HME Consultores horizontal en barra */
+            height: 99px; /* Ajuste corregido por el usuario */
             display: block;
         }
 
@@ -164,12 +164,77 @@
             font-size: 15px;
         }
 
-        /* 4. SECCIÓN DE CIERRE / ACCIÓN (Cinta institucional) */
-        .cinta-contacto {
+        /* 4. NUEVA SECCIÓN: QUIÉNES SOMOS */
+        .seccion-nosotros {
             background-color: var(--hme-gris-suave);
-            padding: 50px 5%;
-            text-align: center;
+            padding: 90px 5%;
             border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .contenido-nosotros {
+            max-width: 850px; /* Ancho óptimo de lectura editorial corporativa */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contenido-nosotros h2 {
+            font-size: 36px;
+            color: var(--hme-azul-marino);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .contenido-nosotros .subtitulo-nosotros {
+            font-size: 20px;
+            color: var(--hme-dorado);
+            font-weight: 600;
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+
+        .contenido-nosotros p {
+            font-size: 17px;
+            color: var(--hme-texto-oscuro);
+            margin-bottom: 25px;
+            text-align: justify; /* Estilo sobrio institucional */
+            text-justify: inter-word;
+        }
+
+        /* 5. ESPACIOS MAQUETADOS PARA FUTURAS SECCIONES */
+        .seccion-areas {
+            padding: 90px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .seccion-areas h2, .seccion-socios h2 {
+            font-size: 36px;
+            color: var(--hme-azul-marino);
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .seccion-socios {
+            background-color: var(--hme-gris-suave);
+            padding: 90px 5%;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .placeholder-texto {
+            text-align: center;
+            color: var(--hme-texto-mutado);
+            font-style: italic;
+            padding: 40px 0;
+        }
+
+        /* 6. SECCIÓN DE CIERRE / ACCIÓN (Cinta institucional) */
+        .cinta-contacto {
+            background-color: var(--blanco);
+            padding: 60px 5%;
+            text-align: center;
         }
 
         .cinta-contacto h2 {
@@ -179,7 +244,7 @@
             font-weight: 400;
         }
 
-        /* 5. FOOTER (Pie de página institucional) */
+        /* 7. FOOTER (Pie de página institucional) */
         footer {
             background-color: var(--hme-azul-marino);
             color: #94a3b8;
@@ -248,6 +313,7 @@
             <a href="#inicio" class="activo">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#nosotros">Nosotros</a>
+            <a href="#socios">Socios</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -281,6 +347,32 @@
             </div>
         </div>
     </main>
+
+    <section class="seccion-nosotros" id="nosotros">
+        <div class="contenido-nosotros">
+            <h2>Quiénes Somos</h2>
+            <div class="linea-division"></div>
+            <p class="subtitulo-nosotros">HME Consultores es una firma especializada en estrategia, estructuración de inversión y vinculación entre la iniciativa privada y el sector público.</p>
+            <p>Acompañamos a empresas, inversionistas y organizaciones en la identificación, desarrollo y ejecución de proyectos estratégicos, facilitando la interacción institucional necesaria para convertir oportunidades en proyectos viables y sostenibles.</p>
+            <p>Nuestra experiencia combina visión empresarial, entendimiento institucional y desarrollo de negocios, permitiendo estructurar iniciativas que generen valor económico y desarrollo regional.</p>
+        </div>
+    </section>
+
+    <section class="seccion-areas">
+        <h2>Áreas de Servicio</h2>
+        <div class="linea-division"></div>
+        <div class="placeholder-texto">
+            <p>[Por favor, envíame los textos o listados correspondientes a las Áreas de Servicio para estructurar este bloque]</p>
+        </div>
+    </section>
+
+    <section class="seccion-socios" id="socios">
+        <h2>Socios</h2>
+        <div class="linea-division"></div>
+        <div class="placeholder-texto">
+            <p>[Por favor, envíame la información y trayectoria de los Socios para armar sus perfiles ejecutivos aquí]</p>
+        </div>
+    </section>
 
     <section class="cinta-contacto" id="contacto">
         <h2>¿Listo para estructurar su próximo gran proyecto corporativo?</h2>
