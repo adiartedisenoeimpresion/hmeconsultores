@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HME Consultores | Estrategia, Inversión y Vinculación</title>
     <style>
-        /* Extracción de paleta institucional de HME Consultores */
+        /* Paleta institucional de HME Consultores */
         :root {
             --hme-azul-marino: #0b192c;   /* Color dominante del logotipo */
-            --hme-dorado: #c5a86b;        /* Tono arena/dorado de la letra 'E' y líneas */
+            --hme-dorado: #c5a86b;        /* Tono arena/dorado */
             --hme-gris-suave: #f4f6f9;    /* Fondo de secciones secundarias */
             --hme-texto-oscuro: #1e293b;  /* Lectura principal */
             --hme-texto-mutado: #64748b;  /* Descripciones secundarias */
@@ -19,7 +19,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Times New Roman', Times, serif; /* Elegancia Serif del logo para títulos */
+            font-family: 'Times New Roman', Times, serif;
         }
 
         body {
@@ -28,17 +28,16 @@
             line-height: 1.6;
         }
 
-        /* Estilos de tipografía general */
         h1, h2, h3, h4 {
             font-family: 'Times New Roman', Times, serif;
             letter-spacing: 0.5px;
         }
 
-        p, a, span, li {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sans-serif limpia para lectura */
+        p, a, span, li, button {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* 1. HEADER (Configuración de Barra de Navegación superior) */
+        /* 1. HEADER */
         header {
             background-color: var(--hme-azul-marino);
             padding: 15px 5%;
@@ -51,7 +50,7 @@
         }
 
         .logo-nav img {
-            height: 99px; /* Altura ideal del logotipo */
+            height: 99px;
             display: block;
         }
 
@@ -70,7 +69,7 @@
             color: var(--hme-dorado);
         }
 
-        /* 2. HERO BANNER (Sección Principal de Impacto) */
+        /* 2. HERO BANNER */
         .hero {
             background-color: var(--hme-azul-marino);
             color: var(--blanco);
@@ -105,6 +104,8 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             display: inline-block;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-hme:hover {
@@ -112,7 +113,6 @@
             color: var(--hme-azul-marino);
         }
 
-        /* Elemento decorativo de división */
         .linea-division {
             width: 80px;
             height: 2px;
@@ -211,7 +211,7 @@
             line-height: 1.6;
         }
 
-        /* 5. SECCIÓN: SOCIOS (Diseño de tarjetas premium preparado para imágenes) */
+        /* 5. SECCIÓN: SOCIOS (Tarjetas Cortas y Homogéneas) */
         .seccion-socios {
             background-color: var(--hme-gris-suave);
             padding: 90px 5%;
@@ -229,8 +229,8 @@
 
         .grid-socios {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             max-width: 1200px;
             margin: 20px auto 0;
         }
@@ -238,13 +238,15 @@
         .socio-card {
             background-color: var(--blanco);
             border: 1px solid #e2e8f0;
-            padding: 40px 30px;
+            padding: 35px 25px;
             text-align: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between; /* Garantiza botones alineados abajo */
+            min-height: 380px; /* Altura idéntica fija para estética simétrica */
         }
 
         .socio-card:hover {
@@ -253,13 +255,18 @@
             border-color: var(--hme-dorado);
         }
 
-        /* Contenedor circular optimizado para fotos de perfil */
+        .socio-info-bloque {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .socio-avatar {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background-color: var(--hme-azul-marino);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             overflow: hidden;
             border: 3px solid var(--hme-dorado);
             display: flex;
@@ -273,24 +280,21 @@
             object-fit: cover;
         }
 
-        /* Iniciales de respaldo si no hay imagen cargada aún */
         .socio-avatar span {
             color: var(--hme-dorado);
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
-            font-family: 'Times New Roman', Times, serif;
         }
 
         .socio-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             color: var(--hme-azul-marino);
             margin-bottom: 4px;
             font-weight: 400;
         }
 
         .socio-puesto {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             color: var(--hme-dorado);
             font-weight: 600;
@@ -298,24 +302,145 @@
             margin-bottom: 20px;
         }
 
-        .socio-descripcion {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 15px;
+        /* Botón estilizado corto para los Socios */
+        .btn-socio {
+            background-color: transparent;
+            color: var(--hme-azul-marino);
+            border: 1px solid var(--hme-azul-marino);
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 180px;
+        }
+
+        .btn-socio:hover {
+            background-color: var(--hme-azul-marino);
+            color: var(--blanco);
+            border-color: var(--hme-azul-marino);
+        }
+
+        /* ==========================================================================
+           ESTILOS DEL SISTEMA DE VENTANAS EMERGENTES (MODALS)
+           ========================================================================== */
+        .hme-modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 2000; /* Por encima de la navegación */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 25, 44, 0.85); /* Fondo oscuro traslúcido corporativo */
+            backdrop-filter: blur(4px); /* Suave desenfoque de fondo */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Contenedor de la biografía */
+        .hme-modal-contenido {
+            background-color: var(--blanco);
+            width: 100%;
+            max-width: 700px;
+            max-height: 85vh;
+            border-top: 4px solid var(--hme-dorado);
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            overflow-y: auto; /* Scroll interno si la trayectoria es muy larga */
+            animation: entradaModal 0.4s ease;
+        }
+
+        @keyframes entradaModal {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Botón de cerrar (X) */
+        .cerrar-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 28px;
+            color: var(--hme-texto-mutado);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cerrar-modal:hover {
+            color: var(--hme-azul-marino);
+        }
+
+        /* Diseño interno del modal */
+        .modal-header-perfil {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .modal-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: var(--hme-azul-marino);
+            border: 2px solid var(--hme-dorado);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .modal-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-avatar span {
+            color: var(--hme-dorado);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .modal-info h3 {
+            font-size: 26px;
+            color: var(--hme-azul-marino);
+        }
+
+        .modal-info .modal-puesto {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--hme-dorado);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .modal-bio {
             color: var(--hme-texto-oscuro);
+            font-size: 16px;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .socio-descripcion p {
-            margin-bottom: 12px;
+        .modal-bio p {
+            margin-bottom: 18px;
         }
 
-        .socio-descripcion p:last-child {
+        .modal-bio p:last-child {
             margin-bottom: 0;
         }
 
-        /* 6. SECCIÓN DE CIERRE / ACCIÓN (Cinta institucional) */
+        /* 6. CINTA DE ACCIÓN */
         .cinta-contacto {
             background-color: var(--blanco);
             padding: 60px 5%;
@@ -330,7 +455,7 @@
             font-weight: 400;
         }
 
-        /* 7. FOOTER (Pie de página institucional) */
+        /* 7. FOOTER */
         footer {
             background-color: var(--hme-azul-marino);
             color: #94a3b8;
@@ -370,7 +495,7 @@
             color: #64748b;
         }
 
-        /* BREAKPOINTS PARA RESPONSIVIDAD AUTOMÁTICA */
+        /* RESPONSIVIDAD */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -385,6 +510,11 @@
             .footer-contenido {
                 flex-direction: column;
                 text-align: center;
+            }
+            .modal-header-perfil {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
             }
         }
     </style>
@@ -449,62 +579,104 @@
         <div class="grid-socios">
             
             <div class="socio-card">
-                <div class="socio-avatar">
+                <div class="socio-info-bloque">
+                    <div class="socio-avatar">
+                        <span>MF</span>
+                    </div>
+                    <h3>Miguel Flores Alonso</h3>
+                    <div class="socio-puesto">Socio</div>
+                </div>
+                <button class="btn-socio" onclick="abrirPerfil('modal-miguel')">Ver Perfil</button>
+            </div>
+
+            <div class="socio-card">
+                <div class="socio-info-bloque">
+                    <div class="socio-avatar">
+                        <span>HG</span>
+                    </div>
+                    <h3>Henry González Duarte</h3>
+                    <div class="socio-puesto">Socio</div>
+                </div>
+                <button class="btn-socio" onclick="abrirPerfil('modal-henry')">Ver Perfil</button>
+            </div>
+
+            <div class="socio-card">
+                <div class="socio-info-bloque">
+                    <div class="socio-avatar">
+                        <span>EH</span>
+                    </div>
+                    <h3>Ernesto Herrera Novelo</h3>
+                    <div class="socio-puesto">Socio</div>
+                </div>
+                <button class="btn-socio" onclick="abrirPerfil('modal-ernesto')">Ver Perfil</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="modal-miguel" class="hme-modal">
+        <div class="hme-modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarPerfil('modal-miguel')">&times;</span>
+            <div class="modal-header-perfil">
+                <div class="modal-avatar">
                     <span>MF</span>
                 </div>
-                <h3>Miguel Flores Alonso</h3>
-                <div class="socio-puesto">Socio</div>
-                <div class="socio-descripcion">
-                    <p>Ejecutivo mexicano con amplia experiencia en desarrollo de negocios, estrategia comercial, dirección empresarial y generación de alianzas estratégicas. A lo largo de su trayectoria ha participado en la estructuración, promoción y desarrollo de proyectos de inversión, turismo, energía, infraestructura y servicios, destacando por su capacidad para identificar oportunidades de crecimiento y construir relaciones de largo plazo con actores del sector público y privado.
-
-Su perfil combina visión estratégica, liderazgo comercial y una sólida capacidad de negociación, orientada a la creación de valor y al desarrollo de proyectos de alto impacto económico y social. Ha ocupado posiciones directivas y de representación empresarial, impulsando iniciativas enfocadas en el crecimiento sostenible, la atracción de inversiones y la consolidación de modelos de negocio innovadores.
-
-Reconocido por su enfoque orientado a resultados, Miguel Flores Alonso promueve la colaboración, la generación de consensos y la construcción de relaciones de confianza como elementos fundamentales para el éxito de los proyectos y organizaciones que lidera.
-
-Áreas de especialidad: desarrollo de negocios, estrategia comercial, dirección general, negociación, alianzas estratégicas, inversión, turismo, energía e infraestructura.</p>
+                <div class="modal-info">
+                    <h3>Miguel Flores Alonso</h3>
+                    <div class="modal-puesto">Socio Especialista</div>
                 </div>
             </div>
+            <div class="modal-bio">
+                <p><strong>Ejecutivo mexicano con amplia experiencia en desarrollo de negocios, estrategia comercial, dirección empresarial y generación de alianzas estratégicas.</strong></p>
+                <p>A lo largo de su trayectoria ha participado en la estructuración, promoción y desarrollo de proyectos de inversión, turismo, energía, infraestructura y servicios, destacando por su capacidad para identificar oportunidades de crecimiento y construir relaciones de largo plazo con actores del sector público y privado.</p>
+                <p>Su perfil combina visión estratégica, liderazgo comercial y una sólida capacidad de negociación, orientada a la creación de valor y al desarrollo de proyectos de alto impacto económico y social.</p>
+                <p>Ha ocupado posiciones directivas y de representación empresarial, impulsando iniciativas enfocadas en el crecimiento sostenible, la atracción de inversiones y la consolidación de modelos de negocio innovadores. Reconocido por su enfoque orientado a resultados, Miguel Flores Alonso promueve la colaboración, la generación de consensos y la construcción de relaciones de confianza como elementos fundamentales para el éxito de los proyectos y organizaciones que lidera.</p>
+            </div>
+        </div>
+    </div>
 
-            <div class="socio-card">
-                <div class="socio-avatar">
+    <div id="modal-henry" class="hme-modal">
+        <div class="hme-modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarPerfil('modal-henry')">&times;</span>
+            <div class="modal-header-perfil">
+                <div class="modal-avatar">
                     <span>HG</span>
                 </div>
-                <h3>Henry González Duarte</h3>
-                <div class="socio-puesto">Socio</div>
-                <div class="socio-descripcion">
-                    <p>Empresario y líder del sector privado con una destacada trayectoria en el fortalecimiento del desarrollo económico y la competitividad empresarial en Yucatán. Es reconocido por su capacidad para impulsar la colaboración entre la iniciativa privada, la academia y el sector público, promoviendo proyectos orientados al crecimiento sostenible, la innovación y la generación de oportunidades para la región.
-
-Se desempeñó como Presidente del Consejo Coordinador Empresarial de Yucatán durante el periodo 2023–2024, etapa en la que impulsó iniciativas relacionadas con la seguridad, la atracción de inversiones, el desarrollo energético, la capacitación del talento y la competitividad empresarial.
-
-Cuenta con experiencia profesional en EY (Ernst & Young), donde participó en proyectos de asesoría fiscal corporativa y transacciones inmobiliarias, fortaleciendo su visión estratégica y conocimiento del entorno empresarial.
-
-Su liderazgo se distingue por un enfoque colaborativo, orientado a resultados y comprometido con la construcción de un entorno favorable para la inversión, la innovación y el desarrollo sustentable. A lo largo de su trayectoria ha promovido el diálogo y la coordinación entre los diferentes actores económicos para contribuir al crecimiento y la prosperidad de Yucatán.
-
-Áreas de experiencia: liderazgo empresarial, desarrollo económico regional, vinculación público-privada, competitividad, atracción de inversiones, sostenibilidad y fortalecimiento institucional.
-
-Esta versión funciona muy bien para una ficha de presentación de entre 120 y 150 palabras. Si la necesitas para un consejo de administración o para presentar a Henry ante inversionistas, puedo hacer una versión más prestigiosa y de mayor impacto ejecutivo.</p> 
-                 </div>
+                <div class="modal-info">
+                    <h3>Henry González Duarte</h3>
+                    <div class="modal-puesto">Socio Especialista</div>
+                </div>
             </div>
+            <div class="modal-bio">
+                <p><strong>Empresario y líder del sector privado con una destacada trayectoria en el fortalecimiento del desarrollo económico y la competitividad empresarial en Yucatán.</strong></p>
+                <p>Es reconocido por su capacidad para impulsar la colaboración entre la iniciativa privada, la academia y el sector público, promoviendo proyectos orientados al crecimiento sostenible, la innovación y la generación de oportunidades para la región. Se desempeñó como Presidente del Consejo Coordinador Empresarial de Yucatán durante el periodo 2023-2024, etapa en la que impulsó iniciativas relacionadas con la seguridad, la atracción de inversiones, el desarrollo energético, la capacitación del talento y la competitividad empresarial.</p>
+                <p>Cuenta con experiencia profesional en EY (Ernst & Young), donde participó en proyectos de asesoría fiscal corporativa y transacciones inmobiliarias, fortaleciendo su visión estratégica y conocimiento del entorno empresarial.</p>
+                <p>Su liderazgo se distingue por un enfoque colaborativo, orientado a resultados y comprometido con la construcción de un entorno favorable para la inversión, la innovación y el desarrollo sustentable.</p>
+            </div>
+        </div>
+    </div>
 
-            <div class="socio-card">
-                <div class="socio-avatar">
+    <div id="modal-ernesto" class="hme-modal">
+        <div class="hme-modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarPerfil('modal-ernesto')">&times;</span>
+            <div class="modal-header-perfil">
+                <div class="modal-avatar">
                     <span>EH</span>
                 </div>
-                <h3>Ernesto Herrera Novelo</h3>
-                <div class="socio-puesto">Socio</div>
-                <div class="socio-descripcion">
-                    <p>Economista y servidor público con amplia trayectoria en la promoción del desarrollo económico, la atracción de inversiones y la generación de empleo en Yucatán. Se desempeñó como titular de la Secretaría de Fomento Económico y Trabajo del Estado de Yucatán durante la administración estatal 2018–2024, encabezando la estrategia de crecimiento económico y fortalecimiento industrial de la entidad.  
-
-Durante su gestión impulsó la llegada de inversiones nacionales e internacionales, promovió el desarrollo de infraestructura económica, la expansión industrial, la formación de talento especializado y el fortalecimiento de sectores estratégicos como manufactura avanzada, tecnologías de la información, logística, energía y economía del conocimiento.  
-
-Ha sido un promotor de la vinculación entre gobierno, iniciativa privada y academia, impulsando políticas orientadas a mejorar la competitividad regional, atraer capital productivo y consolidar a Yucatán como uno de los destinos más atractivos para la inversión en México.  
-
-Áreas de experiencia: desarrollo económico, atracción de inversiones, política industrial, competitividad regional, generación de empleo, infraestructura económica y vinculación público-privada.</p>    
+                <div class="modal-info">
+                    <h3>Ernesto Herrera Novelo</h3>
+                    <div class="modal-puesto">Socio Especialista</div>
                 </div>
             </div>
-
+            <div class="modal-bio">
+                <p><strong>Economista y servidor público con amplia trayectoria en la promoción del desarrollo económico, la atracción de inversiones y la generación de empleo en Yucatán.</strong></p>
+                <p>Se desempeñó como titular de la Secretaría de Fomento Económico y Trabajo del Estado de Yucatán durante la administración estatal 2018–2024, encabezando la estrategia de crecimiento económico y fortalecimiento industrial de la entidad.</p>
+                <p>Durante su gestión impulsó la llegada de inversiones nacionales e internacionales, promovió el desarrollo de infraestructura económica, la expansión industrial, la formación de talento especializado y el fortalecimiento de sectores estratégicos como manufactura avanzada, tecnologías de la información, logística, energía y economía del conocimiento.</p>
+                <p>Ha sido un promotor de la vinculación entre gobierno, iniciativa privada y academia, impulsando políticas orientadas a mejorar la competitividad regional, atraer capital productivo y consolidar a Yucatán como uno de los destinos más atractivos para la inversión en México. Área de experiencia: desarrollo económico, atracción de inversiones, política industrial, competitividad, vinculación institucional y desarrollo de proyectos públicos y privados.</p>
             </div>
-    </section>
+        </div>
+    </div>
+
 
     <section class="cinta-contacto" id="contacto">
         <h2>¿Listo para estructurar su próximo gran proyecto corporativo?</h2>
@@ -527,6 +699,32 @@ Ha sido un promotor de la vinculación entre gobierno, iniciativa privada y acad
             <p>&copy; 2026 HME Consultores. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        function abrirPerfil(idModal) {
+            var modal = document.getElementById(idModal);
+            if (modal) {
+                modal.style.display = "flex";
+                document.body.style.overflow = "hidden"; /* Bloquea scroll de fondo */
+            }
+        }
+
+        function cerrarPerfil(idModal) {
+            var modal = document.getElementById(idModal);
+            if (modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; /* Libera scroll de fondo */
+            }
+        }
+
+        // Cierra el modal de forma intuitiva si el usuario hace clic afuera de la caja blanca
+        window.onclick = function(event) {
+            if (event.target.classList.contains('hme-modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
 
 </body>
 </html>
