@@ -19,7 +19,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Times New Roman', Times, serif; /* Buscando la elegancia Serif del logo para títulos */
+            font-family: 'Times New Roman', Times, serif; /* Elegancia Serif del logo para títulos */
         }
 
         body {
@@ -51,7 +51,7 @@
         }
 
         .logo-nav img {
-            height: 99px; /* Ajuste corregido por el usuario */
+            height: 99px; /* Altura ideal del logotipo */
             display: block;
         }
 
@@ -112,13 +112,7 @@
             color: var(--hme-azul-marino);
         }
 
-        /* 3. SECCIÓN: EJES ESTRATÉGICOS (Fila de 3 columnas en WebSite X5) */
-        .seccion-ejes {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        /* Elemento decorativo de división */
         .linea-division {
             width: 80px;
             height: 2px;
@@ -126,54 +120,15 @@
             margin: 0 auto 50px;
         }
 
-        .grid-ejes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .eje-card {
-            background-color: var(--blanco);
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .eje-card:hover {
-            border-color: var(--hme-dorado);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-        }
-
-        .eje-card .icono {
-            font-size: 32px;
-            color: var(--hme-dorado);
-            margin-bottom: 20px;
-        }
-
-        .eje-card h3 {
-            font-size: 22px;
-            color: var(--hme-azul-marino);
-            margin-bottom: 15px;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        .eje-card p {
-            color: var(--hme-texto-mutado);
-            font-size: 15px;
-        }
-
-        /* 4. NUEVA SECCIÓN: QUIÉNES SOMOS */
+        /* 3. SECCIÓN: QUIÉNES SOMOS (Ahora en primer lugar estratégico) */
         .seccion-nosotros {
             background-color: var(--hme-gris-suave);
             padding: 90px 5%;
-            border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
         }
 
         .contenido-nosotros {
-            max-width: 850px; /* Ancho óptimo de lectura editorial corporativa */
+            max-width: 850px;
             margin: 0 auto;
             text-align: center;
         }
@@ -198,17 +153,18 @@
             font-size: 17px;
             color: var(--hme-texto-oscuro);
             margin-bottom: 25px;
-            text-align: justify; /* Estilo sobrio institucional */
+            text-align: justify;
             text-justify: inter-word;
         }
 
-        /* 5. ESPACIOS MAQUETADOS PARA FUTURAS SECCIONES */
+        /* 4. SECCIÓN: ÁREAS DE SERVICIO (Estructura corporativa unificada) */
         .seccion-areas {
             padding: 90px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .seccion-areas h2, .seccion-socios h2 {
+
+        .seccion-areas h2 {
             font-size: 36px;
             color: var(--hme-azul-marino);
             text-align: center;
@@ -217,10 +173,58 @@
             margin-bottom: 15px;
         }
 
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .servicio-card {
+            background-color: var(--blanco);
+            padding: 45px 35px;
+            border-left: 3px solid var(--hme-dorado); /* Acento elegante lateral */
+            border-top: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -3px rgba(11, 25, 44, 0.06);
+            border-left-color: var(--hme-azul-marino);
+        }
+
+        .servicio-card h3 {
+            font-size: 22px;
+            color: var(--hme-azul-marino);
+            margin-bottom: 15px;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .servicio-card p {
+            color: var(--hme-texto-oscuro);
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+
+        /* 5. SECCIÓN: SOCIOS & CURRÍCULUM EMPRESARIAL */
         .seccion-socios {
             background-color: var(--hme-gris-suave);
             padding: 90px 5%;
             border-top: 1px solid #e2e8f0;
+        }
+
+        .seccion-socios h2 {
+            font-size: 36px;
+            color: var(--hme-azul-marino);
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 15px;
         }
 
         .placeholder-texto {
@@ -235,6 +239,7 @@
             background-color: var(--blanco);
             padding: 60px 5%;
             text-align: center;
+            border-top: 1px solid #e2e8f0;
         }
 
         .cinta-contacto h2 {
@@ -311,8 +316,8 @@
         </div>
         <nav>
             <a href="#inicio" class="activo">Inicio</a>
-            <a href="#servicios">Servicios</a>
             <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
             <a href="#socios">Socios</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -324,45 +329,35 @@
         <a href="#contacto" class="btn-hme">Solicitar una Consulta</a>
     </section>
 
-    <main class="seccion-ejes" id="servicios">
-        <div class="linea-division"></div>
-        
-        <div class="grid-ejes">
-            <div class="eje-card">
-                <div class="icono">📊</div>
-                <h3>Estrategia</h3>
-                <p>Consultoría de dirección para el diseño de hojas de ruta corporativas eficaces, optimizando la toma de decisiones y asegurando la competitividad en mercados exigentes.</p>
-            </div>
-
-            <div class="eje-card">
-                <div class="icono">💼</div>
-                <h3>Inversión</h3>
-                <p>Análisis y estructuración de modelos financieros viables que mitiguen riesgos y potencien la rentabilidad y el crecimiento sostenido de activos empresariales.</p>
-            </div>
-
-            <div class="eje-card">
-                <div class="icono">🤝</div>
-                <h3>Vinculación</h3>
-                <p>Especialistas en la articulación y gestión de alianzas estratégicas público-privadas, facilitando la viabilidad operativa y el éxito de proyectos a gran escala.</p>
-            </div>
-        </div>
-    </main>
-
     <section class="seccion-nosotros" id="nosotros">
         <div class="contenido-nosotros">
             <h2>Quiénes Somos</h2>
             <div class="linea-division"></div>
             <p class="subtitulo-nosotros">HME Consultores es una firma especializada en estrategia, estructuración de inversión y vinculación entre la iniciativa privada y el sector público.</p>
             <p>Acompañamos a empresas, inversionistas y organizaciones en la identificación, desarrollo y ejecución de proyectos estratégicos, facilitando la interacción institucional necesaria para convertir oportunidades en proyectos viables y sostenibles.</p>
-            <p>Nuestra experiencia combina visión empresarial, entendimiento institucional y desarrollo de negocios, permitiendo estructurar iniciativas que generen valor económico y desarrollo regional.</p>
+            <p>Nuestra experiencia combina visión empresarial, entendimiento institucional y desarrollo de negocios, permitiendo estructurar initiatives que generen valor económico y desarrollo regional.</p>
         </div>
     </section>
 
-    <section class="seccion-areas">
+    <section class="seccion-areas" id="servicios">
         <h2>Áreas de Servicio</h2>
         <div class="linea-division"></div>
-        <div class="placeholder-texto">
-            <p>[Por favor, envíame los textos o listados correspondientes a las Áreas de Servicio para estructurar este bloque]</p>
+        
+        <div class="grid-servicios">
+            <div class="servicio-card">
+                <h3>Estrategia y Desarrollo de Proyectos</h3>
+                <p>Diseño de estrategias de crecimiento, estructuración de proyectos y análisis de oportunidades de inversión.</p>
+            </div>
+
+            <div class="servicio-card">
+                <h3>Estructuración de Inversión</h3>
+                <p>Integración de inversionistas, diseño de esquemas de coinversión y estructuración de modelos financieros para proyectos estratégicos.</p>
+            </div>
+
+            <div class="servicio-card">
+                <h3>Vinculación Público-Privada</h3>
+                <p>Interlocución institucional y facilitación de acuerdos entre empresas, inversionistas y entidades gubernamentales.</p>
+            </div>
         </div>
     </section>
 
